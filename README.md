@@ -1,1 +1,1 @@
-# aws-lamda-function-node
+# serverless-lambda-exercise
