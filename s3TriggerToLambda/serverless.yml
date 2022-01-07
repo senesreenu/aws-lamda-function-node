@@ -1,36 +1,10 @@
-service: notification
-
-frameworkVersion: '2 || 3'
+service: serverless-lambda-exercise
 
 provider:
   name: aws
   runtime: nodejs14.x
+  stage: dev
   region: ap-south-1
-  lambdaHashingVersion: 20201221
-  iamRoleStatements:
-    - Effect: Allow
-      Action:
-        - "lambda: InvokeFunction"
-      Resource: "*"
-    - Effect: Allow
-      Action:
-        - ses:SendEmail
-        - ses:GetTemplate
-        - ses:ListTemplates
-      Resource: "*"
-    - Effect: Allow
-      Action:
-        - dynamodb:GetItem
-        - dynamodb:PutItem
-        - dynamodb:UpdateItem
-        - dynamodb:GetRecords
-        - dynamodb:GetShardIterator
-        - dynamodb:DescribeStream
-        - dynamodb:ListShards
-        - dynamodb:ListStreams
-        - dynamodb:Scan
-        - dynamodb:Query
-      Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/*"
 
 functions:
   s3TriggerToLambda:
