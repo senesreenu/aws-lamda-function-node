@@ -4,7 +4,7 @@ frameworkVersion: '2 || 3'
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   region: ap-south-1
   lambdaHashingVersion: 20201221
   iamRoleStatements:
@@ -36,3 +36,4 @@ functions:
   s3TriggerToLambda:
     handler: index.s3TriggerToLambda
     name: s3-trigger-to-lambda
+git 
