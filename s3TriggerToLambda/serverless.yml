@@ -36,4 +36,3 @@ functions:
   s3TriggerToLambda:
     handler: index.s3TriggerToLambda
     name: s3-trigger-to-lambda
-git 
