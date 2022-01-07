@@ -1,4 +1,4 @@
-service: serverless-lambda-exercise
+service: serverless-lambda-exercises
 
 provider:
   name: aws
